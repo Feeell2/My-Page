@@ -1,6 +1,9 @@
 @import "utils/breakpoints";
 @import "utils/mixins";
 @import "utils/variables";
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "reset";
+//@import "../fontawesome/scss/fontawesome";
 @import "custom";
 @import "base";
 @import "component";

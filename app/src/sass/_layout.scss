@@ -1,8 +1,140 @@
-// first page
-#firstPage{
-  height: 100vh;
-  background-image: url('/app/src/assets/photography-of-person-typing-1181675.jpg');
-  .introduction{
-  font-size: 2rem;
+@import "utils/mixins";
+// header
+#headPage{
+  .jumbotron {
+    background-image:url('../assets/photography-of-person-typing-1181675.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.7);
+    margin: 0;
+    background-blend-mode: darken;
+  }
+
 }
+//about
+#aboutMe {
+  .aboutMe-description{
+    font-size: 1.25rem;
+    @include md {
+      font-size: 1.50rem;
+    }
+    @include lg {
+      font-size: 2rem;
+    }
+  }
+}
+#skills{
+  background-color: $background-color-dark;
+
+  .fab{
+    font-size:4.5rem;
+    color: white;
+    @include md {
+      font-size: 5rem;
+    }
+    @include lg {
+      font-size: 5.5rem;
+    }
+  }
+  .skills_skill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding: $icon-padding;
+    transition: all 0.25s ease;
+    &-description{
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-top: 8px;
+      @include md {
+        font-size: 1.25rem;
+      }
+      @include lg {
+        font-size: 1.75rem;
+      }
+    }
+    &:hover{
+      transform: scale(1.1);
+
+    }
+  }
+}
+// set project section
+#projects{
+  .projects-img{
+    height: auto;
+    max-width: 100%;
+  }
+  .project-img{
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    transition:1s ease;
+
+    .project_buttons{
+      //set position buttons on mobile
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-around;
+      transition:1s ease;
+
+      .project_btn{
+        padding:0 10px;
+        color: black;
+        border: 2px solid black;
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+      }
+      //set position buttons on image in large screen
+      @include lg {
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        display: none;
+        z-index: 100;
+        transition:1s ease;
+        .project_btn{
+        margin: 0 10px;
+          color: white;
+          border: 2px solid white;
+          transition:1s ease;
+      }
+      }
+    }
+    @include lg{
+      transition:1s ease;
+      &:hover{
+        .project_buttons{
+          display:flex;
+        }
+        .projects-img{
+          filter:brightness(30%);
+        }
+
+      }
+    }
+  }
+
+  .project_description{
+    text-align: justify;
+    font-size: 1.25rem;
+    margin-bottom: 0;
+  }
+  .project-list{
+    list-style: square;
+    margin-left: 25px;
+    .project_list_element{
+      font-size: 1.25rem;
+    }
+  }
 }
