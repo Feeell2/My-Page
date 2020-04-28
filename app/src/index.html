@@ -15,7 +15,7 @@
     <div class="jumbotron jumbotron-fluid d-flex align-items-center vh-100">
         <div class="container">
             <h1 class="display-3 title mb-3">Tomasz Filiński <span class="title-description">Junior Frontend Developer</span></h1>
-            <a href="#" class="btn btn-outline-primary">About me</a>
+            <a href="#aboutMe" class="btn btn-outline-primary">About me</a>
         </div>
     </div>
 </section>
@@ -26,7 +26,7 @@
             <div class="col-lg-3 my-auto text-center myPhoto"></div>
             <div class="col-lg-9  my-auto text-justify">
                 <p class="aboutMe-description mt-4">My name is Tomasz Filiński. I am beginning Frontend Developer and I study computer science in                                                Polish-Japanse Academy Of Information Technology. My passion is programming. I learn programming for 1,5 years. I mainly learn                  Javascript and  sometimes Java. I care about developing my skills and learning about new ones.</p>
-                <a href="#" class="btn btn-lighter">Uploud CV</a>
+                <a href="#" class="btn btn-lighter">Contact me</a>
             </div>
         </div>
 
@@ -55,7 +55,9 @@
 <section id="projects">
     <div class="container pb-5">
         <h1 class="title title-dark text-center p-5">Projects</h1>
-        <div class="row m-3">
+        <article>
+        <h3 class="title-dark text text-center text-uppercase">To Do App</h3>
+        <div class="row  m-3">
             <div class="col-lg-5">
                 <div class="project1-img project-img">
                     <div class="row project_buttons">
@@ -74,8 +76,11 @@
                 </ol>
             </div>
         </div>
-        <div class="row m-3">
-            <div class="col">
+        </article>
+        <article class="my-5">
+        <h3 class="title-dark text text-center text-uppercase">Task Manager</h3>
+        <div class="row flex-row-reverse m-3">
+            <div class="col-lg-5">
                 <div class="project2-img project-img">
                     <div class="row project_buttons">
                         <a href="#" class=" btn project_btn">Live</a>
@@ -83,10 +88,21 @@
                     </div>
                 </div>
             </div>
-            <div class="col"></div>
+            <div class="col-lg-7"><p class="project_description">This is my interpretation Scrum Board. Helped me practice in React and Redux.</p>
+                <p class="project_description">Technologies which I used:</p>
+                <ol class="project-list">
+                    <li class="project_list_element">React</li>
+                    <li class="project_list_element">React-Router</li>
+                    <li class="project_list_element">Redux</li>
+                    <li class="project_list_element">sass</li>
+                </ol>
+            </div>
         </div>
-        <div class="row m-3">
-            <div class="col">
+        </article>
+        <article class="mt-5">
+        <h3 class="title-dark text text-center text-uppercase">Tabulator</h3>
+        <div class="row m-3 ">
+            <div class="col-lg-5">
                 <div class="project3-img project-img">
                     <div class="row project_buttons">
                         <a href="#" class=" btn project_btn">Live</a>
@@ -94,12 +110,28 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col"></div>
+            <div class="col-lg-7"><p class="project_description">This is Tabulator, where you can find musical notation selected music. Helped me practise AJAX.</p>
+                <p class="project_description">Technologies which I used:</p>
+                <ol class="project-list">
+                    <li class="project_list_element">React</li>
+                    <li class="project_list_element">Ajax</li>
+                    <li class="project_list_element">CSS</li>
+                </ol>
+            </div>
         </div>
+        </article>
     </div>
-
 </section>
+<footer>
+    <div class="socialLinks">
+        <a  href="" ><i class="far fa-envelope"></i></a>
+        <a href="https://github.com/Feeell2"><i class="fab fa-github"></i></a>
+        <a href="www.linkedin.com/in/tomasz-filiński"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <div class="creator ">
+        <p>Created By Tomasz Filiński</p>
+    </div>
+</footer>
 
 </body>
 

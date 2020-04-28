@@ -1,7 +1,7 @@
 import './sass/index.scss';
 import MyPhoto from "./assets/0.jpg";
 import MyProject1 from "./assets/1.jpg";
-import MyProject2 from "./assets/2.jpg";
+import MyProject2 from "./assets/taskManager.jpg";
 import MyProject3 from "./assets/3.jpg";
 
 const getPhoto=(nameClass,img)=>{

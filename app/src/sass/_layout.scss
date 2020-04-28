@@ -66,75 +66,118 @@
 }
 // set project section
 #projects{
-  .projects-img{
-    height: auto;
-    max-width: 100%;
-  }
-  .project-img{
-    display: flex;
-    flex-direction: column-reverse;
-    position: relative;
-    transition:1s ease;
 
-    .project_buttons{
-      //set position buttons on mobile
-      margin: 10px 0;
+    .project-card {
+      border: 1px solid black;
+      padding: $icon-padding;
+      border-radius: 5px;
+    }
+
+    .projects-img {
+      height: auto;
+      max-width: 100%;
+    }
+
+    .project-img {
       display: flex;
-      justify-content: space-around;
-      transition:1s ease;
+      flex-direction: column-reverse;
+      position: relative;
+      transition: 1s ease;
 
-      .project_btn{
-        padding:0 10px;
-        color: black;
-        border: 2px solid black;
-        font-size: 1.25rem;
-        font-weight: 600;
-        letter-spacing: 1px;
+      .project_buttons {
+        //set position buttons on mobile
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        transition: 1s ease;
 
-      }
-      //set position buttons on image in large screen
-      @include lg {
-        justify-content: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        width: 100%;
-        display: none;
-        z-index: 100;
-        transition:1s ease;
-        .project_btn{
-        margin: 0 10px;
-          color: white;
-          border: 2px solid white;
-          transition:1s ease;
-      }
-      }
-    }
-    @include lg{
-      transition:1s ease;
-      &:hover{
-        .project_buttons{
-          display:flex;
-        }
-        .projects-img{
-          filter:brightness(30%);
+        .project_btn {
+          padding: 0 10px;
+          color: black;
+          border: 2px solid black;
+          font-size: 1.25rem;
+          font-weight: 600;
+          letter-spacing: 1px;
+
         }
 
+        //set position buttons on image in large screen
+        @include xl {
+          justify-content: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          display: none;
+          z-index: 100;
+          transition: 1s ease;
+          .project_btn {
+            margin: 0 10px;
+            color: white;
+            border: 2px solid white;
+            transition: 0.3s ease;
+            &:hover{
+              color: black;
+              background-color: white;
+
+            }
+          }
+        }
+      }
+
+      @include xl {
+        transition: 1s ease;
+        &:hover {
+          .project_buttons {
+            display: flex;
+          }
+
+          .projects-img {
+            filter: brightness(30%);
+          }
+
+        }
       }
     }
-  }
 
-  .project_description{
-    text-align: justify;
-    font-size: 1.25rem;
-    margin-bottom: 0;
-  }
-  .project-list{
-    list-style: square;
-    margin-left: 25px;
-    .project_list_element{
+    .project_description {
+      text-align: justify;
       font-size: 1.25rem;
+      margin-bottom: 0;
+    }
+
+    .project-list {
+      list-style: square;
+      margin-left: 25px;
+
+      .project_list_element {
+        font-size: 1.25rem;
+        text-transform: uppercase;
+      }
+    }
+
+}
+footer{
+  background-color: $background-color-dark;
+  overflow-y: hidden;
+  text-align: center;
+
+  .socialLinks{
+    margin: $icon-padding ;
+    padding: 0 $icon-padding;
+    display: inline-block;
+    border-bottom: 1px solid white;
+    a{
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 10px;
+    }
+  }
+  .creator{
+    color: white;
+    p{
+      margin: 0;
     }
   }
 }
