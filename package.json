@@ -1,11 +1,11 @@
 {
-  "name": "wp-minimalist-boilerplate",
+  "name": "Portfolio",
   "version": "1.0.0",
-  "author": "João Vilaça",
-  "description": "Minimal webpack boilerplate with HMR and sass",
+  "author": "Tomasz Filiński",
+  "description": "My portfolio which shows my projects ",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jpggvilaca/webpack-boilerplate"
+    "url": "https://github.com/Feeell2/My-Portfolio"
   },
   "main": "index.js",
   "scripts": {
