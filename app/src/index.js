@@ -4,6 +4,17 @@ import MyProject1 from "./assets/1.jpg";
 import MyProject2 from "./assets/taskManager.jpg";
 import MyProject3 from "./assets/3.jpg";
 
+const getSpinner=()=>{
+    return document.querySelector(".spinner")
+};
+const showLoading=()=>{
+    console.log("work");
+    getSpinner().classList.add("spinner--visible")
+};
+const hideLoading=()=>{
+    console.log("done");
+    getSpinner().classList.remove("spinner--visible")
+};
 const getPhoto=(nameClass,img)=>{
     const myPhotoDiv=document.querySelector(nameClass);
     const myPhoto=new Image();
@@ -20,4 +31,12 @@ const getPhotos=()=>{
     getPhoto(".project3-img",MyProject3);
 
 };
-document.addEventListener('DOMContentLoaded',()=>getPhotos());
+
+document.addEventListener('readystatechange',event=>{
+   if(event.target.readyState==="interactive"){
+        showLoading();
+        getPhotos();
+    }else if (event.target.readyState === 'complete') {
+        hideLoading();
+    }
+});
