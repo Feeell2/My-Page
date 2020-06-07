@@ -1,19 +1,16 @@
+@import "utils/mixins";
 .btn {
   color: white;
   border-color:white;
-  font-size: 1.5rem;
+  @include font-size(1rem,2.5rem);
   border-width:3px ;
   text-transform: uppercase;
   font-weight: bold;
-  @include md {
-    font-size: 2rem;
-  }
-  @include lg {
-    font-size: 2.5rem;
-  }
+
 }
 .btn-lighter{
-  font-size: 1.25rem;
+  @include font-size(1rem,2rem);
+
   color: black;
   border: 2px solid black;
   font-weight: bold;
@@ -40,14 +37,11 @@
   }
   @include md {
     border-width: 4px;
-    font-size: 1.50rem;
   }
-  @include lg {
-    font-size: 2rem;
-  }
+
 }
 .title{
-  font-size: 2.5rem;
+  @include font-size(2rem,4rem);
   color:white;
   font-weight: bold;
   text-transform: uppercase;
@@ -59,14 +53,7 @@
   }
   &-dark{
     color: black;
-  }
-
-
-  @include md {
-    font-size: 3.5rem;
-  }
-  @include lg {
-    font-size: 4rem;
+    font-weight: bold;
   }
 }
 .spinner{

@@ -15,27 +15,17 @@
 //about
 #aboutMe {
   .aboutMe-description{
-    font-size: 1.25rem;
-    @include md {
-      font-size: 1.50rem;
-    }
-    @include lg {
-      font-size: 2rem;
-    }
+    @include font-size(1rem,1.75rem);
+
   }
 }
 #skills{
   background-color: $background-color-dark;
 
   .fab{
-    font-size:4.5rem;
+    @include font-size(4rem,5.5rem);
     color: white;
-    @include md {
-      font-size: 5rem;
-    }
-    @include lg {
-      font-size: 5.5rem;
-    }
+
   }
   .skills_skill{
     display: flex;
@@ -51,12 +41,7 @@
       font-weight: bold;
       letter-spacing: 1px;
       margin-top: 8px;
-      @include md {
-        font-size: 1.25rem;
-      }
-      @include lg {
-        font-size: 1.75rem;
-      }
+      @include font-size(1rem,1.65rem);
     }
     &:hover{
       transform: scale(1.1);
@@ -143,7 +128,7 @@
 
     .project_description {
       text-align: justify;
-      font-size: 1.25rem;
+      @include font-size(1rem,1.75rem);
       margin-bottom: 0;
     }
 
@@ -152,7 +137,7 @@
       margin-left: 25px;
 
       .project_list_element {
-        font-size: 1.25rem;
+        @include font-size(1rem,1.75rem);
         text-transform: uppercase;
       }
     }
@@ -172,12 +157,23 @@ footer{
       color: white;
       font-size: 1.5rem;
       margin: 0 10px;
+      transition: ease 0.5s;
+      i{
+        transition: all 0.2s ease;
+        &:hover{
+          transform: scale(1.3);
+
+        }
+      }
+      }
     }
-  }
+
   .creator{
     color: white;
     p{
+      font-size: 0.8rem;
       margin: 0;
+      text-transform: uppercase;
     }
   }
 }

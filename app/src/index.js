@@ -3,6 +3,8 @@ import MyPhoto from "./assets/0.jpg";
 import MyProject1 from "./assets/1.jpg";
 import MyProject2 from "./assets/taskManager.jpg";
 import MyProject3 from "./assets/3.jpg";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const getSpinner=()=>{
     return document.querySelector(".spinner")
@@ -38,5 +40,6 @@ document.addEventListener('readystatechange',event=>{
         getPhotos();
     }else if (event.target.readyState === 'complete') {
         hideLoading();
+        AOS.init()
     }
 });

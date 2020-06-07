@@ -13,13 +13,13 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
-    publicPath: '/'
+    publicPath: ''
   },
 
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     compress: true,
-    port: 3500,
+    port: 4000,
     hot: true,
   },
 
@@ -33,7 +33,7 @@ module.exports = {
       {
         test: /\.s?css$/,
         use: [
-          env == 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+          env === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           'sass-loader',
